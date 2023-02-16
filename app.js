@@ -32,6 +32,12 @@ form.addEventListener('submit', async function(e){
         weatherImage.src = "images/cloudy.png"
     }
 
+    if(weather.weather[0].main === "Clear"){
+        weatherImage.src = "images/sun.png"
+    }
+
+
+
      tempNumber.innerText = weather.main.temp
 
     tempDescription.innerText = weather.weather[0].description

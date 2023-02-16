@@ -26,6 +26,13 @@ form.addEventListener('submit', async function(e){
 
 
     if(input.value){
+
+        
+
+
+
+
+
         appContainer.style.borderColor = "white"
         async function fetchWeather(){
             let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${key}&units=metric`)
@@ -34,8 +41,20 @@ form.addEventListener('submit', async function(e){
      }
  
      const weather = await fetchWeather()
+
+     if(weather.cod === '404'){
+        placeName.innerText = 'Oops, Invalid Location'
+        tempNumber.innerHTML = 'N/A'
+        tempDescription.innerText = "Please enter a valid location"
+        humidity.innerText = 'N/A'
+        windSpeed.innerText = 'N/A'
+        weatherImage.src = "images/incorrect.png"
+        appContainer.classList.add("expand")
+        
+     }
  
      console.log(weather)
+     
 
      switch(weather.weather[0].main) {
         case "Clear":
@@ -61,10 +80,22 @@ form.addEventListener('submit', async function(e){
         default:
           // code block
       }
-        
+
+      let strArray = weather.weather[0].description.split("")
+      strArray[0] = strArray[0].toUpperCase()
+
+      for(let i = 0; i < strArray.length; i++){
+        if(strArray[i] == " "){
+           strArray[i+1] = strArray[i+1].toUpperCase()
+        }
+      }
+
+      let uppercasedDescription = strArray.join("")
+     
+      
         placeName.innerText = weather.name
         tempNumber.innerHTML = `${weather.main.temp}<sup> &#8451;</sup>`
-        tempDescription.innerText = weather.weather[0].description
+        tempDescription.innerText = uppercasedDescription
         humidity.innerText = `${weather.main.humidity}%`
         windSpeed.innerText = `${weather.wind.speed}km/h`
         appContainer.classList.add("expand")

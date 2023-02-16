@@ -27,7 +27,7 @@ form.addEventListener('submit', async function(e){
 
     if(input.value){
 
-        appContainer.style.borderColor = "white"
+        appContainer.style.borderColor = "black"
         async function fetchWeather(){
             let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${key}&units=metric`)
             let data = await response.json()

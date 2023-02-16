@@ -51,26 +51,26 @@ form.addEventListener('submit', async function(e){
 
      switch(weather.weather[0].main) {
         case "Clear":
-            weatherImage.src = "images/sun.png"
+            weatherImage.src = "images/sun-2.png"
           break;
         case "Clouds":
-            weatherImage.src = "images/cloudy.png"
+            weatherImage.src = "images/cloudy-2.png"
           break;
 
         case "Haze":
-            weatherImage.src = "images/cloudy.png"
+            weatherImage.src = "images/cloudy-2.png"
           break;
 
         case "Rain":
-            weatherImage.src = "images/rainy-day.png"
+            weatherImage.src = "images/rainy-2.png"
             break;
 
         case "Drizzle":
-            weatherImage.src = "images/rainy-day.png"
+            weatherImage.src = "images/rainy-2.png"
             break;
 
         case "Mist":
-            weatherImage.src = "images/fog.png"
+            weatherImage.src = "images/fog-2.png"
             break;
 
         

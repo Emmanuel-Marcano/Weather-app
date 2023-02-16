@@ -98,7 +98,7 @@ form.addEventListener('submit', async function(e){
         appContainer.classList.add("expand")
 
     } else {
-        input.placeholder = "Please enter a location"
+        input.placeholder = " Please enter a location"
         appContainer.style.borderColor = "red"
         appContainer.classList.add("shake")
     }

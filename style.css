@@ -14,7 +14,6 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .location-icon{
@@ -40,10 +39,8 @@ p{
     padding-top: 17px;
     height: 55px;
     box-shadow: 5px 10px 18px #888888;
-    /* max-height: 600px; */
     overflow-y: hidden;
     transition: height 0.3s linear;
-   
     background-color: white;
     border: 1px solid black;
 }
@@ -52,8 +49,6 @@ p{
     height: 530px;
    
 }
-
-
 
 @keyframes shake{
     from{
@@ -74,14 +69,11 @@ p{
 .input-area{
     display: flex;
     align-items: center;
-    /* border-radius: 10px; */
 }
 
 .form{
     flex-grow: 1;
-    /* border: 2px solid black; */
     display: flex;
-   
 }
 
 .place-name{
@@ -92,49 +84,36 @@ p{
     flex-grow: 1;
     margin-left: auto;
     font-size: 18px;
-    margin-right: 5px;
+    margin: 0 10px;
 }
 
 .btn{
     cursor: pointer;
     padding: 13px 15px;
-    
     border-radius: 50%;
     border: none;
     background-color: #888888;
 }
 
 
-
-
-
 .weather-info{
     width: 90%;
-    /* border: 1px solid black; */
     text-align: center;
-
     margin: 20px auto
-
-
 }
 
 .weather-img{
     width: 200px;
     height: 200px;
-
-
 }
 
 .temperature-number{
     font-size: 45px;
-
-
 }
 
 .temperature-description{
     font-size: 23px;
 }
-
 
 .weather-wind-humidity{
     display: flex;
@@ -162,7 +141,4 @@ p{
     display: flex;
     align-items: center;
     gap: 20px;
-
-
 }
-

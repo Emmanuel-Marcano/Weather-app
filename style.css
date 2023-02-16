@@ -56,7 +56,7 @@ body{
 }
 
 .shake{
-    animation: shake 0.1s ease alternate;
+    animation: shake 0.1s ease ;
 }
 
 .input-area{

@@ -15,8 +15,13 @@ const key = '854ca17890cc977ec26ea41c65550f95'
 
 form.addEventListener('submit', async function(e){
     e.preventDefault()
+
+    appContainer.classList.remove('shake')
     
-    appContainer.classList.remove("shake")
+
+    console.log("submitted")
+    
+    
 
 
     if(input.value){
@@ -37,13 +42,15 @@ form.addEventListener('submit', async function(e){
           break;
         case "Clouds":
             weatherImage.src = "images/cloudy.png"
-          
           break;
 
         case "Haze":
             weatherImage.src = "images/cloudy.png"
           break;
 
+        case "Rain":
+            weatherImage.src = "images/rainy-day.png"
+            break;
 
         default:
           // code block
@@ -59,5 +66,6 @@ form.addEventListener('submit', async function(e){
         input.placeholder = "Please enter a location"
         appContainer.style.borderColor = "red"
         appContainer.classList.add("shake")
+       
     }
 })

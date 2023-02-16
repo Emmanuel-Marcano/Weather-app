@@ -9,6 +9,7 @@ const tempDescription = document.querySelector(".temperature-description")
 const humidity = document.querySelector(".humidity-percentage")
 const windSpeed = document.querySelector(".wind-speed-number")
 const input = document.querySelector(".input")
+const placeName = document.querySelector(".place-name")
 
 
 const key = '854ca17890cc977ec26ea41c65550f95'
@@ -52,10 +53,16 @@ form.addEventListener('submit', async function(e){
             weatherImage.src = "images/rainy-day.png"
             break;
 
+        case "Drizzle":
+            weatherImage.src = "images/rainy-day.png"
+            break;
+
+
         default:
           // code block
       }
-
+        
+        placeName.innerText = weather.name
         tempNumber.innerHTML = `${weather.main.temp}<sup> &#8451;</sup>`
         tempDescription.innerText = weather.weather[0].description
         humidity.innerText = `${weather.main.humidity}%`

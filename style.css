@@ -39,7 +39,7 @@ body{
 }
 
 .expand{
-    height: 594px;
+    height: 615px;
    
 }
 
@@ -70,6 +70,10 @@ body{
     /* border: 2px solid black; */
     display: flex;
    
+}
+
+.place-name{
+    font-size: 25px;
 }
 
 .form input{

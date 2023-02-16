@@ -81,21 +81,20 @@ form.addEventListener('submit', async function(e){
           // code block
       }
 
-      let strArray = weather.weather[0].description.split("")
-      strArray[0] = strArray[0].toUpperCase()
-
-      for(let i = 0; i < strArray.length; i++){
-        if(strArray[i] == " "){
-           strArray[i+1] = strArray[i+1].toUpperCase()
-        }
-      }
-
-      let uppercasedDescription = strArray.join("")
+    //   let strArray = weather.weather[0].description.split("")
+    //   strArray[0] = strArray[0].toUpperCase()
+    //   for(let i = 0; i < strArray.length; i++){
+    //     if(strArray[i] == " "){
+    //        strArray[i+1] = strArray[i+1].toUpperCase()
+    //     }
+    //   }
+    //   let uppercasedDescription = strArray.join("")
      
       
         placeName.innerText = weather.name
         tempNumber.innerHTML = `${weather.main.temp}<sup> &#8451;</sup>`
-        tempDescription.innerText = uppercasedDescription
+        tempDescription.innerText = weather.weather[0].description
+        tempDescription.classList.add("capitalize")
         humidity.innerText = `${weather.main.humidity}%`
         windSpeed.innerText = `${weather.wind.speed}km/h`
         appContainer.classList.add("expand")
@@ -104,6 +103,5 @@ form.addEventListener('submit', async function(e){
         input.placeholder = "Please enter a location"
         appContainer.style.borderColor = "red"
         appContainer.classList.add("shake")
-       
     }
 })

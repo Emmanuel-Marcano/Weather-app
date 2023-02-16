@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.body{
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.location-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.search-icon{
+    width: 20px;
+    height: 20px;
+  
+}
+
+.app-container{
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 55px;
+    /* max-height: 600px; */
+    overflow-y: hidden;
+    transition: height 0.8s linear;
+    background-color: white;
+}
+
+.expand{
+    height: 594px;
+   
+}
+
+.input-area{
+    display: flex;
+    align-items: center;
+    /* border-radius: 10px; */
+}
+
+.form{
+    flex-grow: 1;
+    /* border: 2px solid black; */
+    display: flex;
+   
+}
+
+.form input{
+    flex-grow: 1;
+    margin-left: auto;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 13px 12px;
+    border-radius: 50%;
+    border: none;
+}
+
+
+
+
+
+.weather-info{
+    width: 90%;
+    /* border: 1px solid black; */
+    text-align: center;
+
+    margin: 20px auto
+
+
+}
+
+.weather-img{
+    width: 200px;
+    height: 200px;
+
+
+}
+
+.temperature-number{
+    font-size: 45px;
+
+
+}
+
+.temperature-description{
+    font-size: 23px;
+}
+
+
+.weather-wind-humidity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.humidity-img{
+    width: 40px;
+    height: 40px;
+}
+
+.wind-img{
+    width: 40px;
+    height: 40px;
+}
+
+.wind-speed{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.humidity{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+}
+

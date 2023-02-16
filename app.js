@@ -38,7 +38,7 @@ form.addEventListener('submit', async function(e){
 
 
 
-     tempNumber.innerText = weather.main.temp
+     tempNumber.innerHTML = `${weather.main.temp}<sup> &#8451;</sup>`
 
     tempDescription.innerText = weather.weather[0].description
     humidity.innerText = `${weather.main.humidity}%`

@@ -27,12 +27,6 @@ form.addEventListener('submit', async function(e){
 
     if(input.value){
 
-        
-
-
-
-
-
         appContainer.style.borderColor = "white"
         async function fetchWeather(){
             let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${key}&units=metric`)
@@ -50,7 +44,6 @@ form.addEventListener('submit', async function(e){
         windSpeed.innerText = 'N/A'
         weatherImage.src = "images/incorrect.png"
         appContainer.classList.add("expand")
-        
      }
  
      console.log(weather)
@@ -76,6 +69,11 @@ form.addEventListener('submit', async function(e){
             weatherImage.src = "images/rainy-day.png"
             break;
 
+        case "Mist":
+            weatherImage.src = "images/fog.png"
+            break;
+
+        
 
         default:
           // code block

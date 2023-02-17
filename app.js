@@ -64,6 +64,11 @@ form.addEventListener('submit', async function(e){
             weatherImage.src = "images/fog-2.png"
             break;
 
+        case "Snow":
+            weatherImage.src = "images/snow.png"
+            break;
+
+
         default:
           // code block
       }
@@ -75,7 +80,7 @@ form.addEventListener('submit', async function(e){
         tempDescription.innerText = weather.weather[0].description
         tempDescription.classList.add("capitalize")
         humidity.innerText = `${weather.main.humidity}%`
-        windSpeed.innerText = `${weather.wind.speed}km/h`
+        windSpeed.innerText = `${Math.trunc(weather.wind.speed * 3.6)}km/h`
         appContainer.classList.add("expand")
 
     } else {

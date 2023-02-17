@@ -48,7 +48,7 @@ p{
     padding: 10px 10px;
     padding-top: 18px;
     /* height: 56px; */
-    height: 79px;
+    height: 80px;
     box-shadow: 5px 10px 18px #888888;
     overflow-y: hidden;
     transition: height 0.3s linear;
@@ -58,7 +58,7 @@ p{
 }
 
 .expand{
-    height: 565px;
+    height: 575px;
    
 }
 

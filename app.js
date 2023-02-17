@@ -13,7 +13,7 @@ const key = '854ca17890cc977ec26ea41c65550f95'
 
 form.addEventListener('submit', async function(e){
     e.preventDefault()
-    appContainer.classList.remove("shake")
+   
     console.log("submitted")
     
     if(input.value){
@@ -87,5 +87,17 @@ form.addEventListener('submit', async function(e){
         input.placeholder = " Please enter a location"
         appContainer.style.borderColor = "red"
         appContainer.classList.add("shake")
+      
+    }
+})
+
+
+let btn  = document.querySelector(".btn")
+
+btn.addEventListener("click", function(){
+
+    if(appContainer.classList.contains("shake")){
+        appContainer.classList.remove("shake")
+
     }
 })

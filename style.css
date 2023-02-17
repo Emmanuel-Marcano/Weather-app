@@ -26,8 +26,8 @@ p{
 }
 
 .search-icon{
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@ p{
     width: 95%;
     max-width: 600px;
     border-radius: 10px;
-    padding: 10px 12px;
+    padding: 10px 15px;
     padding-top: 17px;
     /* height: 56px; */
     height: 89px;

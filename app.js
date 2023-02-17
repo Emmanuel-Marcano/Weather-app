@@ -9,6 +9,7 @@ const windSpeed = document.querySelector(".wind-speed-number")
 const input = document.querySelector(".input")
 const placeName = document.querySelector(".place-name")
 const btn  = document.querySelector(".btn")
+const icon = document.querySelector(".icon")
 const key = '854ca17890cc977ec26ea41c65550f95'
 
 
@@ -20,6 +21,7 @@ form.addEventListener('submit', async function(e){
     if(input.value){
 
         appContainer.style.borderColor = "black"
+        icon.classList.remove("red")
         async function fetchWeather(){
             let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${key}&units=metric`)
             let data = await response.json()
@@ -85,7 +87,9 @@ form.addEventListener('submit', async function(e){
         appContainer.classList.add("expand")
 
     } else {
+
         input.placeholder = " Please enter a location"
+        icon.classList.add("red")
         appContainer.style.borderColor = "red"
         appContainer.classList.add("shake")
       

@@ -8,6 +8,9 @@ p{
     margin: 14px 0;
 }
 
+.red{
+    color: red;
+}
 
 
 .body{
@@ -42,7 +45,7 @@ p{
     border-radius: 10px;
     padding: 10px;
     padding-top: 17px;
-    height: 57px;
+    height: 56px;
     box-shadow: 5px 10px 18px #888888;
     overflow-y: hidden;
     transition: height 0.3s linear;
@@ -100,7 +103,12 @@ p{
     padding: 15px 15px;
     border-radius: 50%;
     border: none;
-    background-color: #888888;
+    /* background-color: #888888; */
+    background-image: linear-gradient(to top, #979d9c 0%, #bab6bd 100%);
+}
+
+.btn:hover{
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 }
 
 

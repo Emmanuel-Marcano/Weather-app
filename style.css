@@ -41,7 +41,7 @@ p{
     width: 95%;
     max-width: 600px;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     padding-top: 18px;
     /* height: 56px; */
     height: 89px;
@@ -54,7 +54,7 @@ p{
 }
 
 .expand{
-    height: 570px;
+    height: 560px;
    
 }
 
@@ -90,11 +90,11 @@ p{
     font-size: 25px;
 }
 
-.form input{
+.input{
     flex-grow: 1;
     margin-left: auto;
-    font-size: 18px;
-    margin: 0 10px;
+    font-size: 16px;
+    margin: 0 8px;
 }
 
 .btn{
@@ -112,7 +112,7 @@ p{
 
 
 .weather-info{
-    width: 90%;
+    /* width: 90%; */
     text-align: center;
     margin: 20px auto
 }

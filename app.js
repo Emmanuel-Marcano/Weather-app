@@ -8,6 +8,7 @@ const humidity = document.querySelector(".humidity-percentage")
 const windSpeed = document.querySelector(".wind-speed-number")
 const input = document.querySelector(".input")
 const placeName = document.querySelector(".place-name")
+const btn  = document.querySelector(".btn")
 const key = '854ca17890cc977ec26ea41c65550f95'
 
 
@@ -92,7 +93,7 @@ form.addEventListener('submit', async function(e){
 })
 
 
-let btn  = document.querySelector(".btn")
+
 
 btn.addEventListener("click", function(){
 

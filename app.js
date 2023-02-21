@@ -11,6 +11,34 @@ const placeName = document.querySelector(".place-name")
 const btn  = document.querySelector(".btn")
 const icon = document.querySelector(".icon")
 const key = '854ca17890cc977ec26ea41c65550f95'
+let unit;
+
+
+
+const btnContainer = document.querySelector(".btn-container")
+const unitBtn = document.querySelector(".unit-btn")
+
+
+
+
+btnContainer.addEventListener("click", function(){
+
+
+    if(btnContainer.classList.contains("slide-right"))
+    {
+        btnContainer.classList.remove("slide-right")
+        unitBtn.innerHTML = "<sup>&#8451;</sup>"
+    }
+    else{
+        btnContainer.classList.add("slide-right")
+        unitBtn.innerHTML = "<sup>&#8457;</sup>"
+        
+
+    }
+
+
+
+})
 
 
 form.addEventListener('submit', async function(e){
@@ -20,10 +48,18 @@ form.addEventListener('submit', async function(e){
     
     if(input.value){
 
+        if(btnContainer.classList.contains("slide-right")){
+             unit = "imperial"
+        }
+
+        else{
+            unit = "metric"
+        }
+
         appContainer.style.borderColor = "black"
         icon.classList.remove("red")
         async function fetchWeather(){
-            let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${key}&units=metric`)
+            let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${key}&units=${unit}`)
             let data = await response.json()
             return data
      }
@@ -79,7 +115,7 @@ form.addEventListener('submit', async function(e){
      
 
         placeName.innerText = weather.name
-        tempNumber.innerHTML = `${Math.trunc(weather.main.temp)}<sup>&#8451;</sup>`
+        tempNumber.innerHTML = `${Math.trunc(weather.main.temp)}${ unit == "metric" ? "<sup>&#8451;</sup>" : "<sup>&#8457;</sup>"  }`
         tempDescription.innerText = weather.weather[0].description
         tempDescription.classList.add("capitalize")
         humidity.innerText = `${weather.main.humidity}%`
@@ -106,3 +142,11 @@ btn.addEventListener("click", function(){
 
     }
 })
+
+
+
+
+
+
+
+

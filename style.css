@@ -21,6 +21,8 @@ p{
     background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -47,19 +49,16 @@ p{
     border-radius: 10px;
     padding: 10px 10px;
     padding-top: 18px;
-    /* height: 56px; */
     max-height: 80px;
     box-shadow: 5px 10px 18px #888888;
     overflow-y: hidden;
     transition: max-height 0.3s linear;
-    
     background-color: white;
     border: 1px solid black;
 }
 
 .expand{
     max-height: 570px;
-   
 }
 
 @keyframes shake{
@@ -77,7 +76,6 @@ p{
 
 .shake{
     animation: shake 0.1s ease ;
-   
 }
 
 .input-area{
@@ -161,3 +159,56 @@ p{
     align-items: center;
     gap: 20px;
 }
+
+
+
+
+/* Unit btn */
+
+
+
+
+
+.btn-container{
+    background-color: bisque;
+    width: 80px;
+    height: 40px;
+    /* padding: 30px 60px; */
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    transition: justify-content 2s ease ;
+    
+   
+    
+}
+
+.unit-btn{
+    background-color: aqua;
+    width: 30px ;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 2s ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+
+
+}
+
+.slide-right{
+    justify-content: end;
+ 
+    /* margin-left:auto; */
+
+}
+
+
+
+
+
+
+
